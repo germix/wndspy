@@ -1,0 +1,43 @@
+#ifndef CFORMINFO2WINDOWS_H
+#define CFORMINFO2WINDOWS_H
+
+#include <QWidget>
+
+namespace Ui {
+    class CFormInfo2Windows;
+}
+
+class CFormInfo2Windows;
+class CFormInfo2WindowsPrivate;
+
+class CFormInfo2Windows : public QWidget
+{
+    Q_OBJECT
+	
+	Ui::CFormInfo2Windows*	ui;
+	CWindowProcessList*		m_List;
+	bool					m_WrapFind;
+	QString					m_ClassName;
+public:
+	CFormInfo2Windows(QWidget *parent = 0);
+	~CFormInfo2Windows();
+
+private:
+public slots:
+	void		SlotRefresh();
+	void		SlotFindPrev();
+	void		SlotFindNext();
+	void		SlotFindWindow();
+	void		SlotFindCurrent();
+
+	void		SlotOpenTree();
+	void		SlotOpenTreeAll();
+	void		SlotCloseTree();
+	void		SlotCloseTreeAll();
+
+	void		SlotCustomContextMenu(const QPoint& point);
+private:
+	bool		OpenFindWindowDialog();
+};
+
+#endif // CFORMINFO2WINDOWS_H

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormInfo2Process</class>
+ <widget class="QWidget" name="FormInfo2Process">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>413</width>
+    <height>390</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string comment="Info2">Process</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QToolButton" name="toolbutton">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../res/resource.qrc">
+       <normaloff>:/images/main/refresh.png</normaloff>:/images/main/refresh.png</iconset>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QTreeWidget" name="treewidget">
+     <column>
+      <property name="text">
+       <string>Id</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Full path</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../res/resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>toolbutton</sender>
+   <signal>clicked()</signal>
+   <receiver>FormInfo2Process</receiver>
+   <slot>slotRefresh()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slotRefresh()</slot>
+ </slots>
+</ui>

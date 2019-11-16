@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormInfo2Windows</class>
+ <widget class="QWidget" name="FormInfo2Windows">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>414</width>
+    <height>335</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string comment="Info2">Windows</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QToolButton" name="toolbutton_refresh">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../res/resource.qrc">
+       <normaloff>:/images/main/refresh.png</normaloff>:/images/main/refresh.png</iconset>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QToolButton" name="toolbutton_find_window">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../res/resource.qrc">
+       <normaloff>:/images/main/find.png</normaloff>:/images/main/find.png</iconset>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QToolButton" name="toolbutton_find_current">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../res/resource.qrc">
+       <normaloff>:/images/main/findcurrent.png</normaloff>:/images/main/findcurrent.png</iconset>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="5">
+    <widget class="QToolButton" name="toolbutton_opentree">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../res/resource.qrc">
+       <normaloff>:/images/main/opentree.png</normaloff>:/images/main/opentree.png</iconset>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="6">
+    <widget class="QToolButton" name="toolbutton_opentree_all">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../res/resource.qrc">
+       <normaloff>:/images/main/opentree_all.png</normaloff>:/images/main/opentree_all.png</iconset>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="7">
+    <widget class="QToolButton" name="toolbutton_closetree">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../res/resource.qrc">
+       <normaloff>:/images/main/closetree.png</normaloff>:/images/main/closetree.png</iconset>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="8">
+    <widget class="QToolButton" name="toolbutton_closetree_all">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../res/resource.qrc">
+       <normaloff>:/images/main/closetree_all.png</normaloff>:/images/main/closetree_all.png</iconset>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="16">
+    <widget class="QTreeWidget" name="treeview">
+     <column>
+      <property name="text">
+       <string>Process</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="3">
+    <widget class="QToolButton" name="toolbutton_find_prev">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../res/resource.qrc">
+       <normaloff>:/images/main/findprev.png</normaloff>:/images/main/findprev.png</iconset>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="4">
+    <widget class="QToolButton" name="toolbutton_find_next">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset resource="../../res/resource.qrc">
+       <normaloff>:/images/main/findnext.png</normaloff>:/images/main/findnext.png</iconset>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../res/resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>toolbutton_refresh</sender>
+   <signal>clicked()</signal>
+   <receiver>FormInfo2Windows</receiver>
+   <slot>slotRefresh()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolbutton_find_window</sender>
+   <signal>clicked()</signal>
+   <receiver>FormInfo2Windows</receiver>
+   <slot>slotFindWindow()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolbutton_opentree</sender>
+   <signal>clicked()</signal>
+   <receiver>FormInfo2Windows</receiver>
+   <slot>slotOpenTree()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>78</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolbutton_opentree_all</sender>
+   <signal>clicked()</signal>
+   <receiver>FormInfo2Windows</receiver>
+   <slot>slotOpenTreeAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolbutton_closetree</sender>
+   <signal>clicked()</signal>
+   <receiver>FormInfo2Windows</receiver>
+   <slot>slotCloseTree()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>136</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolbutton_closetree_all</sender>
+   <signal>clicked()</signal>
+   <receiver>FormInfo2Windows</receiver>
+   <slot>slotCloseTreeAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolbutton_find_current</sender>
+   <signal>clicked()</signal>
+   <receiver>FormInfo2Windows</receiver>
+   <slot>slotFindCurrent()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolbutton_find_prev</sender>
+   <signal>clicked()</signal>
+   <receiver>FormInfo2Windows</receiver>
+   <slot>slotFindPrev()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>252</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>toolbutton_find_next</sender>
+   <signal>clicked()</signal>
+   <receiver>FormInfo2Windows</receiver>
+   <slot>slotFindNext()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>223</x>
+     <y>19</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>206</x>
+     <y>167</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slotRefresh()</slot>
+  <slot>slotFindWindow()</slot>
+  <slot>slotOpenTree()</slot>
+  <slot>slotOpenTreeAll()</slot>
+  <slot>slotCloseTree()</slot>
+  <slot>slotCloseTreeAll()</slot>
+  <slot>slotFindCurrent()</slot>
+  <slot>slotFindPrev()</slot>
+  <slot>slotFindNext()</slot>
+ </slots>
+</ui>
